@@ -26,12 +26,15 @@ main:
 	bne $t2 $0 odd
 
 even:
-	add $t2 $t0 $t0
-	add $t0 $t2 $t0
+	li $t2 3
+	mult $t0 $t2
+	mflo $t0
 	j print
 
 odd:
-	add $t0 $t0 $t0
+	li $t2 2
+	mult $t0 $t2
+	mflo $t0
 	j print
 
 print:
